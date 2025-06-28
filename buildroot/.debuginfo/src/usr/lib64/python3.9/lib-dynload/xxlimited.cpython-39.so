@@ -1,0 +1,11 @@
+/usr/src/debug/python3-3.9.20/
+/usr/src/debug/python3-3.9.20/Include/dictobject.h
+/usr/src/debug/python3-3.9.20/Include/longobject.h
+/usr/src/debug/python3-3.9.20/Include/methodobject.h
+/usr/src/debug/python3-3.9.20/Include/modsupport.h
+/usr/src/debug/python3-3.9.20/Include/moduleobject.h
+/usr/src/debug/python3-3.9.20/Include/object.h
+/usr/src/debug/python3-3.9.20/Include/objimpl.h
+/usr/src/debug/python3-3.9.20/Include/pyerrors.h
+/usr/src/debug/python3-3.9.20/Include/pyport.h
+/usr/src/debug/python3-3.9.20/Modules/xxlimited.c

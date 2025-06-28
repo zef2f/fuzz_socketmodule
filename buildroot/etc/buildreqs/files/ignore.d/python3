@@ -1,0 +1,2 @@
+^/usr/lib64/python3[^/]*/site-packages(/.+.(pth|egg-info(|/PKG-INFO|/entry_points.txt|/namespace_packages.txt)))?$
+^/usr/lib/python3[^/]*/site-packages(/.+.(pth|egg-info(|/PKG-INFO|/entry_points.txt|/namespace_packages.txt)))?$

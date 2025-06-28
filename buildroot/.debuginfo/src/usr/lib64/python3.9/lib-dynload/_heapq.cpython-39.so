@@ -1,0 +1,14 @@
+/usr/src/debug/python3-3.9.20/
+/usr/src/debug/python3-3.9.20/Include/cpython/listobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/object.h
+/usr/src/debug/python3-3.9.20/Include/descrobject.h
+/usr/src/debug/python3-3.9.20/Include/listobject.h
+/usr/src/debug/python3-3.9.20/Include/methodobject.h
+/usr/src/debug/python3-3.9.20/Include/modsupport.h
+/usr/src/debug/python3-3.9.20/Include/moduleobject.h
+/usr/src/debug/python3-3.9.20/Include/object.h
+/usr/src/debug/python3-3.9.20/Include/pyerrors.h
+/usr/src/debug/python3-3.9.20/Include/pyport.h
+/usr/src/debug/python3-3.9.20/Include/unicodeobject.h
+/usr/src/debug/python3-3.9.20/Modules/_heapqmodule.c
+/usr/src/debug/python3-3.9.20/Modules/clinic/_heapqmodule.c.h

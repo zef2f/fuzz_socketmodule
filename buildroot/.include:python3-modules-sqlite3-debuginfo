@@ -1,0 +1,75 @@
+%package -n python3-modules-sqlite3-debuginfo
+Version: 3.9.20
+Release: alt0.c10f2.1.harness1
+Summary: DB-API 2.0 interface for SQLite databases (debug files)
+Group: Development/Debug
+Requires: python3-modules-sqlite3 = 3.9.20-alt0.c10f2.1.harness1
+AutoReqProv: no, debuginfo
+%description -n python3-modules-sqlite3-debuginfo
+This package provides debug information for package python3-modules-sqlite3.
+%files -n python3-modules-sqlite3-debuginfo
+%dir /usr/lib/debug/.build-id/82
+%dir /usr/lib/debug/usr/lib64/python3.9
+%dir /usr/lib/debug/usr/lib64/python3.9/lib-dynload
+%dir /usr/src/debug/python3-3.9.20
+%dir /usr/src/debug/python3-3.9.20/Include
+%dir /usr/src/debug/python3-3.9.20/Include/cpython
+%dir /usr/src/debug/python3-3.9.20/Modules
+%dir /usr/src/debug/python3-3.9.20/Modules/_sqlite
+/usr/lib/debug/.build-id/82/dbaea94ea9cb2f0a184059a173dbec12ecfa72
+/usr/lib/debug/.build-id/82/dbaea94ea9cb2f0a184059a173dbec12ecfa72.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_sqlite3.cpython-39.so.debug
+/usr/src/debug/python3-3.9.20/Include/abstract.h
+/usr/src/debug/python3-3.9.20/Include/boolobject.h
+/usr/src/debug/python3-3.9.20/Include/bytearrayobject.h
+/usr/src/debug/python3-3.9.20/Include/bytesobject.h
+/usr/src/debug/python3-3.9.20/Include/ceval.h
+/usr/src/debug/python3-3.9.20/Include/cpython/abstract.h
+/usr/src/debug/python3-3.9.20/Include/cpython/dictobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/listobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/object.h
+/usr/src/debug/python3-3.9.20/Include/cpython/pyerrors.h
+/usr/src/debug/python3-3.9.20/Include/cpython/pystate.h
+/usr/src/debug/python3-3.9.20/Include/cpython/sysmodule.h
+/usr/src/debug/python3-3.9.20/Include/cpython/tupleobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/unicodeobject.h
+/usr/src/debug/python3-3.9.20/Include/descrobject.h
+/usr/src/debug/python3-3.9.20/Include/dictobject.h
+/usr/src/debug/python3-3.9.20/Include/floatobject.h
+/usr/src/debug/python3-3.9.20/Include/import.h
+/usr/src/debug/python3-3.9.20/Include/listobject.h
+/usr/src/debug/python3-3.9.20/Include/longobject.h
+/usr/src/debug/python3-3.9.20/Include/methodobject.h
+/usr/src/debug/python3-3.9.20/Include/modsupport.h
+/usr/src/debug/python3-3.9.20/Include/moduleobject.h
+/usr/src/debug/python3-3.9.20/Include/object.h
+/usr/src/debug/python3-3.9.20/Include/objimpl.h
+/usr/src/debug/python3-3.9.20/Include/pyerrors.h
+/usr/src/debug/python3-3.9.20/Include/pyframe.h
+/usr/src/debug/python3-3.9.20/Include/pyport.h
+/usr/src/debug/python3-3.9.20/Include/pystate.h
+/usr/src/debug/python3-3.9.20/Include/pystrcmp.h
+/usr/src/debug/python3-3.9.20/Include/pythonrun.h
+/usr/src/debug/python3-3.9.20/Include/pythread.h
+/usr/src/debug/python3-3.9.20/Include/pytime.h
+/usr/src/debug/python3-3.9.20/Include/structmember.h
+/usr/src/debug/python3-3.9.20/Include/tupleobject.h
+/usr/src/debug/python3-3.9.20/Include/unicodeobject.h
+/usr/src/debug/python3-3.9.20/Include/weakrefobject.h
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/cache.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/cache.h
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/connection.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/connection.h
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/cursor.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/cursor.h
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/microprotocols.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/microprotocols.h
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/module.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/prepare_protocol.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/prepare_protocol.h
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/row.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/row.h
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/statement.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/statement.h
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/util.c
+/usr/src/debug/python3-3.9.20/Modules/_sqlite/util.h

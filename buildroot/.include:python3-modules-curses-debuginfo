@@ -1,0 +1,61 @@
+%package -n python3-modules-curses-debuginfo
+Version: 3.9.20
+Release: alt0.c10f2.1.harness1
+Summary: Python3 "curses" module (debug files)
+Group: Development/Debug
+Requires: python3-modules-curses = 3.9.20-alt0.c10f2.1.harness1
+AutoReqProv: no, debuginfo
+%description -n python3-modules-curses-debuginfo
+This package provides debug information for package python3-modules-curses.
+%files -n python3-modules-curses-debuginfo
+%dir /usr/lib/debug/.build-id/1e
+%dir /usr/lib/debug/.build-id/42
+%dir /usr/lib/debug/usr/lib64/python3.9
+%dir /usr/lib/debug/usr/lib64/python3.9/lib-dynload
+%dir /usr/src/debug/python3-3.9.20
+%dir /usr/src/debug/python3-3.9.20/Include
+%dir /usr/src/debug/python3-3.9.20/Include/cpython
+%dir /usr/src/debug/python3-3.9.20/Modules
+%dir /usr/src/debug/python3-3.9.20/Modules/clinic
+/usr/lib/debug/.build-id/1e/91c21b1e7139cfe8c7faee5583e95db9585ee6
+/usr/lib/debug/.build-id/1e/91c21b1e7139cfe8c7faee5583e95db9585ee6.debug
+/usr/lib/debug/.build-id/42/7a7a671ad935a0470ca4138ce980f1794dbc42
+/usr/lib/debug/.build-id/42/7a7a671ad935a0470ca4138ce980f1794dbc42.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_curses.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_curses_panel.cpython-39.so.debug
+/usr/src/debug/python3-3.9.20/Include/boolobject.h
+/usr/src/debug/python3-3.9.20/Include/bytesobject.h
+/usr/src/debug/python3-3.9.20/Include/ceval.h
+/usr/src/debug/python3-3.9.20/Include/cpython/abstract.h
+/usr/src/debug/python3-3.9.20/Include/cpython/bytesobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/fileutils.h
+/usr/src/debug/python3-3.9.20/Include/cpython/object.h
+/usr/src/debug/python3-3.9.20/Include/cpython/pymem.h
+/usr/src/debug/python3-3.9.20/Include/cpython/pystate.h
+/usr/src/debug/python3-3.9.20/Include/cpython/tupleobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/unicodeobject.h
+/usr/src/debug/python3-3.9.20/Include/descrobject.h
+/usr/src/debug/python3-3.9.20/Include/dictobject.h
+/usr/src/debug/python3-3.9.20/Include/fileobject.h
+/usr/src/debug/python3-3.9.20/Include/import.h
+/usr/src/debug/python3-3.9.20/Include/longobject.h
+/usr/src/debug/python3-3.9.20/Include/methodobject.h
+/usr/src/debug/python3-3.9.20/Include/modsupport.h
+/usr/src/debug/python3-3.9.20/Include/moduleobject.h
+/usr/src/debug/python3-3.9.20/Include/object.h
+/usr/src/debug/python3-3.9.20/Include/objimpl.h
+/usr/src/debug/python3-3.9.20/Include/py_curses.h
+/usr/src/debug/python3-3.9.20/Include/pycapsule.h
+/usr/src/debug/python3-3.9.20/Include/pyerrors.h
+/usr/src/debug/python3-3.9.20/Include/pyframe.h
+/usr/src/debug/python3-3.9.20/Include/pymem.h
+/usr/src/debug/python3-3.9.20/Include/pyport.h
+/usr/src/debug/python3-3.9.20/Include/pystate.h
+/usr/src/debug/python3-3.9.20/Include/structseq.h
+/usr/src/debug/python3-3.9.20/Include/sysmodule.h
+/usr/src/debug/python3-3.9.20/Include/tupleobject.h
+/usr/src/debug/python3-3.9.20/Include/unicodeobject.h
+/usr/src/debug/python3-3.9.20/Modules/_curses_panel.c
+/usr/src/debug/python3-3.9.20/Modules/_cursesmodule.c
+/usr/src/debug/python3-3.9.20/Modules/clinic/_curses_panel.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_cursesmodule.c.h

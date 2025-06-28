@@ -1,0 +1,14 @@
+%package -n python3-dev-debuginfo
+Version: 3.9.20
+Release: alt0.c10f2.1.harness1
+Summary: Libraries and header files needed for Python 3 development (debug files)
+Group: Development/Debug
+Requires: python3-dev = 3.9.20-alt0.c10f2.1.harness1
+AutoReqProv: no, debuginfo
+%description -n python3-dev-debuginfo
+This package provides debug information for package python3-dev.
+%files -n python3-dev-debuginfo
+%dir /usr/lib/debug/.build-id/4f
+/usr/lib/debug/.build-id/4f/dff8ccd2c5ff1103981b774a7464d78f592bb6
+/usr/lib/debug/.build-id/4f/dff8ccd2c5ff1103981b774a7464d78f592bb6.debug
+/usr/lib/debug/usr/lib64/libpython3.so.debug

@@ -1,0 +1,558 @@
+%package -n python3-base-debuginfo
+Version: 3.9.20
+Release: alt0.c10f2.1.harness1
+Summary: Python 3 runtime libraries (debug files)
+Group: Development/Debug
+Requires: python3-base = 3.9.20-alt0.c10f2.1.harness1
+AutoReqProv: no, debuginfo
+%description -n python3-base-debuginfo
+This package provides debug information for package python3-base.
+%files -n python3-base-debuginfo
+%dir /usr/lib/debug/.build-id/05
+%dir /usr/lib/debug/.build-id/06
+%dir /usr/lib/debug/.build-id/09
+%dir /usr/lib/debug/.build-id/12
+%dir /usr/lib/debug/.build-id/15
+%dir /usr/lib/debug/.build-id/16
+%dir /usr/lib/debug/.build-id/17
+%dir /usr/lib/debug/.build-id/1e
+%dir /usr/lib/debug/.build-id/20
+%dir /usr/lib/debug/.build-id/22
+%dir /usr/lib/debug/.build-id/2a
+%dir /usr/lib/debug/.build-id/2c
+%dir /usr/lib/debug/.build-id/34
+%dir /usr/lib/debug/.build-id/35
+%dir /usr/lib/debug/.build-id/36
+%dir /usr/lib/debug/.build-id/38
+%dir /usr/lib/debug/.build-id/3c
+%dir /usr/lib/debug/.build-id/3e
+%dir /usr/lib/debug/.build-id/3f
+%dir /usr/lib/debug/.build-id/41
+%dir /usr/lib/debug/.build-id/4a
+%dir /usr/lib/debug/.build-id/4b
+%dir /usr/lib/debug/.build-id/57
+%dir /usr/lib/debug/.build-id/58
+%dir /usr/lib/debug/.build-id/5a
+%dir /usr/lib/debug/.build-id/5b
+%dir /usr/lib/debug/.build-id/5d
+%dir /usr/lib/debug/.build-id/63
+%dir /usr/lib/debug/.build-id/67
+%dir /usr/lib/debug/.build-id/6b
+%dir /usr/lib/debug/.build-id/6c
+%dir /usr/lib/debug/.build-id/6f
+%dir /usr/lib/debug/.build-id/7f
+%dir /usr/lib/debug/.build-id/85
+%dir /usr/lib/debug/.build-id/8c
+%dir /usr/lib/debug/.build-id/9f
+%dir /usr/lib/debug/.build-id/a1
+%dir /usr/lib/debug/.build-id/a2
+%dir /usr/lib/debug/.build-id/a5
+%dir /usr/lib/debug/.build-id/a6
+%dir /usr/lib/debug/.build-id/aa
+%dir /usr/lib/debug/.build-id/ae
+%dir /usr/lib/debug/.build-id/b2
+%dir /usr/lib/debug/.build-id/b4
+%dir /usr/lib/debug/.build-id/b6
+%dir /usr/lib/debug/.build-id/b8
+%dir /usr/lib/debug/.build-id/ba
+%dir /usr/lib/debug/.build-id/c0
+%dir /usr/lib/debug/.build-id/c4
+%dir /usr/lib/debug/.build-id/ce
+%dir /usr/lib/debug/.build-id/d5
+%dir /usr/lib/debug/.build-id/da
+%dir /usr/lib/debug/.build-id/df
+%dir /usr/lib/debug/.build-id/e2
+%dir /usr/lib/debug/.build-id/e4
+%dir /usr/lib/debug/.build-id/ea
+%dir /usr/lib/debug/.build-id/fb
+%dir /usr/lib/debug/usr/lib64/python3.9
+%dir /usr/lib/debug/usr/lib64/python3.9/lib-dynload
+%dir /usr/src/debug/python3-3.9.20
+%dir /usr/src/debug/python3-3.9.20/Include
+%dir /usr/src/debug/python3-3.9.20/Include/cpython
+%dir /usr/src/debug/python3-3.9.20/Include/internal
+%dir /usr/src/debug/python3-3.9.20/Modules
+%dir /usr/src/debug/python3-3.9.20/Modules/_blake2
+%dir /usr/src/debug/python3-3.9.20/Modules/_blake2/clinic
+%dir /usr/src/debug/python3-3.9.20/Modules/_blake2/impl
+%dir /usr/src/debug/python3-3.9.20/Modules/_ctypes
+%dir /usr/src/debug/python3-3.9.20/Modules/_decimal
+%dir /usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec
+%dir /usr/src/debug/python3-3.9.20/Modules/_multiprocessing
+%dir /usr/src/debug/python3-3.9.20/Modules/_multiprocessing/clinic
+%dir /usr/src/debug/python3-3.9.20/Modules/_sha3
+%dir /usr/src/debug/python3-3.9.20/Modules/_sha3/clinic
+%dir /usr/src/debug/python3-3.9.20/Modules/_sha3/kcp
+%dir /usr/src/debug/python3-3.9.20/Modules/_ssl
+%dir /usr/src/debug/python3-3.9.20/Modules/_xxtestfuzz
+%dir /usr/src/debug/python3-3.9.20/Modules/cjkcodecs
+%dir /usr/src/debug/python3-3.9.20/Modules/cjkcodecs/clinic
+%dir /usr/src/debug/python3-3.9.20/Modules/clinic
+/usr/lib/debug/.build-id/05/024a6dcf0bbbf058f7c50259869fcf7b7129fd
+/usr/lib/debug/.build-id/05/024a6dcf0bbbf058f7c50259869fcf7b7129fd.debug
+/usr/lib/debug/.build-id/06/0031bba48282de80883cbedbe0958080217a61
+/usr/lib/debug/.build-id/06/0031bba48282de80883cbedbe0958080217a61.debug
+/usr/lib/debug/.build-id/09/915bc32a23ea7c311cbd7117635c22e63248b8
+/usr/lib/debug/.build-id/09/915bc32a23ea7c311cbd7117635c22e63248b8.debug
+/usr/lib/debug/.build-id/12/5e0d7f3961518c0034e48c8a8c59dba94d9ad8
+/usr/lib/debug/.build-id/12/5e0d7f3961518c0034e48c8a8c59dba94d9ad8.debug
+/usr/lib/debug/.build-id/15/ba1268d167e16a62cea18e14eb228abc1e191c
+/usr/lib/debug/.build-id/15/ba1268d167e16a62cea18e14eb228abc1e191c.debug
+/usr/lib/debug/.build-id/16/22f5fe80ed57636b0e3b0f24c18eca2d0493a6
+/usr/lib/debug/.build-id/16/22f5fe80ed57636b0e3b0f24c18eca2d0493a6.debug
+/usr/lib/debug/.build-id/16/6f7e530c7d84a67b0b2be5bbf7c8126480bed5
+/usr/lib/debug/.build-id/16/6f7e530c7d84a67b0b2be5bbf7c8126480bed5.debug
+/usr/lib/debug/.build-id/17/24b64395d1fe5bc46c9be5db93de2b0e11bc53
+/usr/lib/debug/.build-id/17/24b64395d1fe5bc46c9be5db93de2b0e11bc53.debug
+/usr/lib/debug/.build-id/1e/36e6c04fd81e7ead39bb7429b21c2bd0912169
+/usr/lib/debug/.build-id/1e/36e6c04fd81e7ead39bb7429b21c2bd0912169.debug
+/usr/lib/debug/.build-id/20/596ae8e3a15b60cbe8e7c92f3be507e914cd92
+/usr/lib/debug/.build-id/20/596ae8e3a15b60cbe8e7c92f3be507e914cd92.debug
+/usr/lib/debug/.build-id/22/74cbcf37a547911e9f093e3bf7fec34239fea7
+/usr/lib/debug/.build-id/22/74cbcf37a547911e9f093e3bf7fec34239fea7.debug
+/usr/lib/debug/.build-id/22/f76fd4fa5f8bb9627ce28c42d0ddfc2269c2c7
+/usr/lib/debug/.build-id/22/f76fd4fa5f8bb9627ce28c42d0ddfc2269c2c7.debug
+/usr/lib/debug/.build-id/2a/0354b9f9337f51837b863cb44d78858026a76c
+/usr/lib/debug/.build-id/2a/0354b9f9337f51837b863cb44d78858026a76c.debug
+/usr/lib/debug/.build-id/2a/a3703f8686f41ced62916fd3a99fa5ade96722
+/usr/lib/debug/.build-id/2a/a3703f8686f41ced62916fd3a99fa5ade96722.debug
+/usr/lib/debug/.build-id/2c/78d6add0ee3536fc4486782983a1b01dbd521f
+/usr/lib/debug/.build-id/2c/78d6add0ee3536fc4486782983a1b01dbd521f.debug
+/usr/lib/debug/.build-id/34/4aee28be0b34eabca489e8bfd69e2d83e70c11
+/usr/lib/debug/.build-id/34/4aee28be0b34eabca489e8bfd69e2d83e70c11.debug
+/usr/lib/debug/.build-id/35/e495f4dadc4d660e22fa1e1310c504c42241ee
+/usr/lib/debug/.build-id/35/e495f4dadc4d660e22fa1e1310c504c42241ee.debug
+/usr/lib/debug/.build-id/36/b81b7e5f64496ac9dfddf088044487714d2969
+/usr/lib/debug/.build-id/36/b81b7e5f64496ac9dfddf088044487714d2969.debug
+/usr/lib/debug/.build-id/38/760260c2dda1aaf007dd27ff874ba040e58ac6
+/usr/lib/debug/.build-id/38/760260c2dda1aaf007dd27ff874ba040e58ac6.debug
+/usr/lib/debug/.build-id/3c/0a6f5eb9309d7b7a5c15d76558a0a792593f03
+/usr/lib/debug/.build-id/3c/0a6f5eb9309d7b7a5c15d76558a0a792593f03.debug
+/usr/lib/debug/.build-id/3c/3b76cff4d5189f16904988cdb731e2d8f5594f
+/usr/lib/debug/.build-id/3c/3b76cff4d5189f16904988cdb731e2d8f5594f.debug
+/usr/lib/debug/.build-id/3c/fbc9a2e7c58ca24d44f36d586bca650b914331
+/usr/lib/debug/.build-id/3c/fbc9a2e7c58ca24d44f36d586bca650b914331.debug
+/usr/lib/debug/.build-id/3e/9cf9cc1f3992a6d650fee4d6293bca3f94973e
+/usr/lib/debug/.build-id/3e/9cf9cc1f3992a6d650fee4d6293bca3f94973e.debug
+/usr/lib/debug/.build-id/3f/9e935950bd1bb9155eace0b68782f2fa9285f9
+/usr/lib/debug/.build-id/3f/9e935950bd1bb9155eace0b68782f2fa9285f9.debug
+/usr/lib/debug/.build-id/41/32fb6437086d963c4c489c51a90c5bf0e0ec2d
+/usr/lib/debug/.build-id/41/32fb6437086d963c4c489c51a90c5bf0e0ec2d.debug
+/usr/lib/debug/.build-id/4a/8a8a25a46ccc0a15324b6062eacf51e5169bed
+/usr/lib/debug/.build-id/4a/8a8a25a46ccc0a15324b6062eacf51e5169bed.debug
+/usr/lib/debug/.build-id/4b/a729be460d7120d003c444846ea62b71989b45
+/usr/lib/debug/.build-id/4b/a729be460d7120d003c444846ea62b71989b45.debug
+/usr/lib/debug/.build-id/57/14c27cf116db5a13879b26f66d615cd7057255
+/usr/lib/debug/.build-id/57/14c27cf116db5a13879b26f66d615cd7057255.debug
+/usr/lib/debug/.build-id/58/28d15f90a9df9f99163965af48bf39932e7fda
+/usr/lib/debug/.build-id/58/28d15f90a9df9f99163965af48bf39932e7fda.debug
+/usr/lib/debug/.build-id/5a/b09f720e4a8553a7ed455f0c98b72b2976ba23
+/usr/lib/debug/.build-id/5a/b09f720e4a8553a7ed455f0c98b72b2976ba23.debug
+/usr/lib/debug/.build-id/5b/2041179cd95fa5e6ba593028b0d013eeed001f
+/usr/lib/debug/.build-id/5b/2041179cd95fa5e6ba593028b0d013eeed001f.debug
+/usr/lib/debug/.build-id/5b/63c529c102021c2030924b9eb31c5c06b93fd3
+/usr/lib/debug/.build-id/5b/63c529c102021c2030924b9eb31c5c06b93fd3.debug
+/usr/lib/debug/.build-id/5d/b2116dda0fbee502c6a54a487a8113a1a5a662
+/usr/lib/debug/.build-id/5d/b2116dda0fbee502c6a54a487a8113a1a5a662.debug
+/usr/lib/debug/.build-id/5d/dd85247170ba6367270847c069656847320292
+/usr/lib/debug/.build-id/5d/dd85247170ba6367270847c069656847320292.debug
+/usr/lib/debug/.build-id/63/e6acbd0c072e4b892148dd73e338d1c06de14e
+/usr/lib/debug/.build-id/63/e6acbd0c072e4b892148dd73e338d1c06de14e.debug
+/usr/lib/debug/.build-id/67/0f90a58273ec30a457ca28fc5fc659ab044a40
+/usr/lib/debug/.build-id/67/0f90a58273ec30a457ca28fc5fc659ab044a40.debug
+/usr/lib/debug/.build-id/6b/5d95de602707db2e5ccd63c4c6f4248f95b25e
+/usr/lib/debug/.build-id/6b/5d95de602707db2e5ccd63c4c6f4248f95b25e.debug
+/usr/lib/debug/.build-id/6c/2f4ac4ece4f72dc7c6a35baf685af9fc15e337
+/usr/lib/debug/.build-id/6c/2f4ac4ece4f72dc7c6a35baf685af9fc15e337.debug
+/usr/lib/debug/.build-id/6f/a261ff067224ba8cbbf4d0a97f3254b8ac33d4
+/usr/lib/debug/.build-id/6f/a261ff067224ba8cbbf4d0a97f3254b8ac33d4.debug
+/usr/lib/debug/.build-id/7f/447588169825f6491c8cdc138eb1c7e1aab377
+/usr/lib/debug/.build-id/7f/447588169825f6491c8cdc138eb1c7e1aab377.debug
+/usr/lib/debug/.build-id/7f/5643b9feb678a431180afd2912100c3c282628
+/usr/lib/debug/.build-id/7f/5643b9feb678a431180afd2912100c3c282628.debug
+/usr/lib/debug/.build-id/7f/d45bd59b517f2eee6f73b437a7451e49dc908b
+/usr/lib/debug/.build-id/7f/d45bd59b517f2eee6f73b437a7451e49dc908b.debug
+/usr/lib/debug/.build-id/85/d4feaafe8c16948112202fe9cd379e3b3567e3
+/usr/lib/debug/.build-id/85/d4feaafe8c16948112202fe9cd379e3b3567e3.debug
+/usr/lib/debug/.build-id/8c/08841df7f9ecfbfdb11488403d3dcc1feb6ed3
+/usr/lib/debug/.build-id/8c/08841df7f9ecfbfdb11488403d3dcc1feb6ed3.debug
+/usr/lib/debug/.build-id/9f/f79a253ee5e74e041158dbc49450cca01df645
+/usr/lib/debug/.build-id/9f/f79a253ee5e74e041158dbc49450cca01df645.debug
+/usr/lib/debug/.build-id/a1/18c823cfddbdfc0bd997ea2d11a984ae726b83
+/usr/lib/debug/.build-id/a1/18c823cfddbdfc0bd997ea2d11a984ae726b83.debug
+/usr/lib/debug/.build-id/a1/5a2c9f272fd912bcfca025f2a3ca15a115ae17
+/usr/lib/debug/.build-id/a1/5a2c9f272fd912bcfca025f2a3ca15a115ae17.debug
+/usr/lib/debug/.build-id/a2/a80cd3e45ffb8ef7a7aa981414b8a9d47bedc4
+/usr/lib/debug/.build-id/a2/a80cd3e45ffb8ef7a7aa981414b8a9d47bedc4.debug
+/usr/lib/debug/.build-id/a5/1fc82568cc35df8ba54294774d7bb508eb7d76
+/usr/lib/debug/.build-id/a5/1fc82568cc35df8ba54294774d7bb508eb7d76.debug
+/usr/lib/debug/.build-id/a6/30a164ff4904cdd4c0e8519b4dc733dba87394
+/usr/lib/debug/.build-id/a6/30a164ff4904cdd4c0e8519b4dc733dba87394.debug
+/usr/lib/debug/.build-id/aa/7b015fb4a086ed2dca43c7d75906b20e594247
+/usr/lib/debug/.build-id/aa/7b015fb4a086ed2dca43c7d75906b20e594247.debug
+/usr/lib/debug/.build-id/ae/30525fdd496575c01685b7b2b7e16b3b3793d8
+/usr/lib/debug/.build-id/ae/30525fdd496575c01685b7b2b7e16b3b3793d8.debug
+/usr/lib/debug/.build-id/b2/654fc2fa338c7cbdc4a14424d062d8534bdf88
+/usr/lib/debug/.build-id/b2/654fc2fa338c7cbdc4a14424d062d8534bdf88.debug
+/usr/lib/debug/.build-id/b4/f0b2924ab5ffdd885e9880a91c6eaa8d71e85d
+/usr/lib/debug/.build-id/b4/f0b2924ab5ffdd885e9880a91c6eaa8d71e85d.debug
+/usr/lib/debug/.build-id/b6/2ae449d091cb7d07dca641179f19ffffc515b0
+/usr/lib/debug/.build-id/b6/2ae449d091cb7d07dca641179f19ffffc515b0.debug
+/usr/lib/debug/.build-id/b8/b5c6e6e17deae38eab959b8a636a6471aa2064
+/usr/lib/debug/.build-id/b8/b5c6e6e17deae38eab959b8a636a6471aa2064.debug
+/usr/lib/debug/.build-id/ba/dc5d4a8c8eb0cd322853536d725b01faa23251
+/usr/lib/debug/.build-id/ba/dc5d4a8c8eb0cd322853536d725b01faa23251.debug
+/usr/lib/debug/.build-id/c0/4e7acbb5a420333ff4e7c26e7658afde0dd928
+/usr/lib/debug/.build-id/c0/4e7acbb5a420333ff4e7c26e7658afde0dd928.debug
+/usr/lib/debug/.build-id/c4/7299543111bb39c44f202ad8bef70290a1d6f6
+/usr/lib/debug/.build-id/c4/7299543111bb39c44f202ad8bef70290a1d6f6.debug
+/usr/lib/debug/.build-id/ce/955962e416b0eea655537025265622ca1ac9a9
+/usr/lib/debug/.build-id/ce/955962e416b0eea655537025265622ca1ac9a9.debug
+/usr/lib/debug/.build-id/d5/e9ae3ffe35393b916899cdc90384b4c4e2b698
+/usr/lib/debug/.build-id/d5/e9ae3ffe35393b916899cdc90384b4c4e2b698.debug
+/usr/lib/debug/.build-id/da/dd1ff96ec44a05856a3bee8064712df30c9aaa
+/usr/lib/debug/.build-id/da/dd1ff96ec44a05856a3bee8064712df30c9aaa.debug
+/usr/lib/debug/.build-id/df/6c5de7d4059f5e1fd5234217317b8fbeefe0ac
+/usr/lib/debug/.build-id/df/6c5de7d4059f5e1fd5234217317b8fbeefe0ac.debug
+/usr/lib/debug/.build-id/e2/c2de6db5fc1fe2c72e0a09a57acd0c9bd1d6cf
+/usr/lib/debug/.build-id/e2/c2de6db5fc1fe2c72e0a09a57acd0c9bd1d6cf.debug
+/usr/lib/debug/.build-id/e4/62ae9393e27c562330830fea9870a7c3e54cc5
+/usr/lib/debug/.build-id/e4/62ae9393e27c562330830fea9870a7c3e54cc5.debug
+/usr/lib/debug/.build-id/ea/5360c9695ccd83ea8757d7b65e2f2aa77b08c5
+/usr/lib/debug/.build-id/ea/5360c9695ccd83ea8757d7b65e2f2aa77b08c5.debug
+/usr/lib/debug/.build-id/fb/9c208602c48bce9c016a6d6cb884e9729dc914
+/usr/lib/debug/.build-id/fb/9c208602c48bce9c016a6d6cb884e9729dc914.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_asyncio.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_bisect.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_blake2.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_bz2.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_codecs_cn.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_codecs_hk.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_codecs_iso2022.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_codecs_jp.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_codecs_kr.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_codecs_tw.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_contextvars.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_crypt.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_csv.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_ctypes.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_datetime.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_dbm.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_decimal.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_elementtree.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_gdbm.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_hashlib.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_heapq.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_json.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_lsprof.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_lzma.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_md5.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_multibytecodec.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_multiprocessing.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_opcode.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_pickle.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_posixshmem.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_posixsubprocess.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_queue.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_random.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_sha1.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_sha256.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_sha3.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_sha512.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_socket.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_ssl.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_statistics.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_struct.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_testinternalcapi.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_testmultiphase.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_uuid.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_xxsubinterpreters.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_xxtestfuzz.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/_zoneinfo.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/array.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/audioop.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/binascii.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/cmath.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/fcntl.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/grp.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/math.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/mmap.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/ossaudiodev.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/parser.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/pyexpat.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/readline.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/resource.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/select.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/spwd.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/syslog.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/termios.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/unicodedata.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/xxlimited.cpython-39.so.debug
+/usr/lib/debug/usr/lib64/python3.9/lib-dynload/zlib.cpython-39.so.debug
+/usr/src/debug/python3-3.9.20/Include/Python-ast.h
+/usr/src/debug/python3-3.9.20/Include/abstract.h
+/usr/src/debug/python3-3.9.20/Include/asdl.h
+/usr/src/debug/python3-3.9.20/Include/ast.h
+/usr/src/debug/python3-3.9.20/Include/bitset.h
+/usr/src/debug/python3-3.9.20/Include/boolobject.h
+/usr/src/debug/python3-3.9.20/Include/bytearrayobject.h
+/usr/src/debug/python3-3.9.20/Include/bytesobject.h
+/usr/src/debug/python3-3.9.20/Include/ceval.h
+/usr/src/debug/python3-3.9.20/Include/classobject.h
+/usr/src/debug/python3-3.9.20/Include/code.h
+/usr/src/debug/python3-3.9.20/Include/codecs.h
+/usr/src/debug/python3-3.9.20/Include/compile.h
+/usr/src/debug/python3-3.9.20/Include/complexobject.h
+/usr/src/debug/python3-3.9.20/Include/context.h
+/usr/src/debug/python3-3.9.20/Include/cpython/abstract.h
+/usr/src/debug/python3-3.9.20/Include/cpython/bytearrayobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/bytesobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/ceval.h
+/usr/src/debug/python3-3.9.20/Include/cpython/code.h
+/usr/src/debug/python3-3.9.20/Include/cpython/dictobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/fileutils.h
+/usr/src/debug/python3-3.9.20/Include/cpython/frameobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/import.h
+/usr/src/debug/python3-3.9.20/Include/cpython/initconfig.h
+/usr/src/debug/python3-3.9.20/Include/cpython/interpreteridobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/listobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/methodobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/object.h
+/usr/src/debug/python3-3.9.20/Include/cpython/objimpl.h
+/usr/src/debug/python3-3.9.20/Include/cpython/pyerrors.h
+/usr/src/debug/python3-3.9.20/Include/cpython/pylifecycle.h
+/usr/src/debug/python3-3.9.20/Include/cpython/pymem.h
+/usr/src/debug/python3-3.9.20/Include/cpython/pystate.h
+/usr/src/debug/python3-3.9.20/Include/cpython/sysmodule.h
+/usr/src/debug/python3-3.9.20/Include/cpython/traceback.h
+/usr/src/debug/python3-3.9.20/Include/cpython/tupleobject.h
+/usr/src/debug/python3-3.9.20/Include/cpython/unicodeobject.h
+/usr/src/debug/python3-3.9.20/Include/datetime.h
+/usr/src/debug/python3-3.9.20/Include/descrobject.h
+/usr/src/debug/python3-3.9.20/Include/dictobject.h
+/usr/src/debug/python3-3.9.20/Include/fileobject.h
+/usr/src/debug/python3-3.9.20/Include/fileutils.h
+/usr/src/debug/python3-3.9.20/Include/floatobject.h
+/usr/src/debug/python3-3.9.20/Include/genobject.h
+/usr/src/debug/python3-3.9.20/Include/grammar.h
+/usr/src/debug/python3-3.9.20/Include/import.h
+/usr/src/debug/python3-3.9.20/Include/internal/pycore_accu.h
+/usr/src/debug/python3-3.9.20/Include/internal/pycore_byteswap.h
+/usr/src/debug/python3-3.9.20/Include/internal/pycore_dtoa.h
+/usr/src/debug/python3-3.9.20/Include/internal/pycore_hashtable.h
+/usr/src/debug/python3-3.9.20/Include/internal/pycore_initconfig.h
+/usr/src/debug/python3-3.9.20/Include/internal/pycore_pyerrors.h
+/usr/src/debug/python3-3.9.20/Include/intrcheck.h
+/usr/src/debug/python3-3.9.20/Include/listobject.h
+/usr/src/debug/python3-3.9.20/Include/longintrepr.h
+/usr/src/debug/python3-3.9.20/Include/longobject.h
+/usr/src/debug/python3-3.9.20/Include/memoryobject.h
+/usr/src/debug/python3-3.9.20/Include/methodobject.h
+/usr/src/debug/python3-3.9.20/Include/modsupport.h
+/usr/src/debug/python3-3.9.20/Include/moduleobject.h
+/usr/src/debug/python3-3.9.20/Include/namespaceobject.h
+/usr/src/debug/python3-3.9.20/Include/node.h
+/usr/src/debug/python3-3.9.20/Include/object.h
+/usr/src/debug/python3-3.9.20/Include/objimpl.h
+/usr/src/debug/python3-3.9.20/Include/parsetok.h
+/usr/src/debug/python3-3.9.20/Include/picklebufobject.h
+/usr/src/debug/python3-3.9.20/Include/pyarena.h
+/usr/src/debug/python3-3.9.20/Include/pycapsule.h
+/usr/src/debug/python3-3.9.20/Include/pyerrors.h
+/usr/src/debug/python3-3.9.20/Include/pyexpat.h
+/usr/src/debug/python3-3.9.20/Include/pyframe.h
+/usr/src/debug/python3-3.9.20/Include/pyhash.h
+/usr/src/debug/python3-3.9.20/Include/pylifecycle.h
+/usr/src/debug/python3-3.9.20/Include/pymath.h
+/usr/src/debug/python3-3.9.20/Include/pymem.h
+/usr/src/debug/python3-3.9.20/Include/pyport.h
+/usr/src/debug/python3-3.9.20/Include/pystate.h
+/usr/src/debug/python3-3.9.20/Include/pystrhex.h
+/usr/src/debug/python3-3.9.20/Include/pystrtod.h
+/usr/src/debug/python3-3.9.20/Include/pythonrun.h
+/usr/src/debug/python3-3.9.20/Include/pythread.h
+/usr/src/debug/python3-3.9.20/Include/pytime.h
+/usr/src/debug/python3-3.9.20/Include/setobject.h
+/usr/src/debug/python3-3.9.20/Include/sliceobject.h
+/usr/src/debug/python3-3.9.20/Include/structmember.h
+/usr/src/debug/python3-3.9.20/Include/structseq.h
+/usr/src/debug/python3-3.9.20/Include/sysmodule.h
+/usr/src/debug/python3-3.9.20/Include/tupleobject.h
+/usr/src/debug/python3-3.9.20/Include/ucnhash.h
+/usr/src/debug/python3-3.9.20/Include/unicodeobject.h
+/usr/src/debug/python3-3.9.20/Include/warnings.h
+/usr/src/debug/python3-3.9.20/Include/weakrefobject.h
+/usr/src/debug/python3-3.9.20/Modules/_asynciomodule.c
+/usr/src/debug/python3-3.9.20/Modules/_bisectmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_blake2/blake2b_impl.c
+/usr/src/debug/python3-3.9.20/Modules/_blake2/blake2module.c
+/usr/src/debug/python3-3.9.20/Modules/_blake2/blake2s_impl.c
+/usr/src/debug/python3-3.9.20/Modules/_blake2/clinic/blake2b_impl.c.h
+/usr/src/debug/python3-3.9.20/Modules/_blake2/clinic/blake2s_impl.c.h
+/usr/src/debug/python3-3.9.20/Modules/_blake2/impl/blake2-impl.h
+/usr/src/debug/python3-3.9.20/Modules/_blake2/impl/blake2.h
+/usr/src/debug/python3-3.9.20/Modules/_blake2/impl/blake2b-ref.c
+/usr/src/debug/python3-3.9.20/Modules/_blake2/impl/blake2s-ref.c
+/usr/src/debug/python3-3.9.20/Modules/_bz2module.c
+/usr/src/debug/python3-3.9.20/Modules/_contextvarsmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_cryptmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_csv.c
+/usr/src/debug/python3-3.9.20/Modules/_ctypes/_ctypes.c
+/usr/src/debug/python3-3.9.20/Modules/_ctypes/callbacks.c
+/usr/src/debug/python3-3.9.20/Modules/_ctypes/callproc.c
+/usr/src/debug/python3-3.9.20/Modules/_ctypes/cfield.c
+/usr/src/debug/python3-3.9.20/Modules/_ctypes/ctypes.h
+/usr/src/debug/python3-3.9.20/Modules/_ctypes/stgdict.c
+/usr/src/debug/python3-3.9.20/Modules/_datetimemodule.c
+/usr/src/debug/python3-3.9.20/Modules/_dbmmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/_decimal.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/docstrings.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/basearith.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/basearith.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/bits.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/constants.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/constants.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/context.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/convolute.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/convolute.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/crt.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/crt.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/difradix2.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/difradix2.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/fnt.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/fourstep.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/io.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/mpalloc.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/mpalloc.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/mpdecimal.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/mpdecimal.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/numbertheory.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/numbertheory.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/sixstep.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/sixstep.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/transpose.c
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/transpose.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/typearith.h
+/usr/src/debug/python3-3.9.20/Modules/_decimal/libmpdec/umodarith.h
+/usr/src/debug/python3-3.9.20/Modules/_elementtree.c
+/usr/src/debug/python3-3.9.20/Modules/_gdbmmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_hashopenssl.c
+/usr/src/debug/python3-3.9.20/Modules/_heapqmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_json.c
+/usr/src/debug/python3-3.9.20/Modules/_lsprof.c
+/usr/src/debug/python3-3.9.20/Modules/_lzmamodule.c
+/usr/src/debug/python3-3.9.20/Modules/_math.c
+/usr/src/debug/python3-3.9.20/Modules/_math.h
+/usr/src/debug/python3-3.9.20/Modules/_multiprocessing/clinic/posixshmem.c.h
+/usr/src/debug/python3-3.9.20/Modules/_multiprocessing/multiprocessing.c
+/usr/src/debug/python3-3.9.20/Modules/_multiprocessing/multiprocessing.h
+/usr/src/debug/python3-3.9.20/Modules/_multiprocessing/posixshmem.c
+/usr/src/debug/python3-3.9.20/Modules/_multiprocessing/semaphore.c
+/usr/src/debug/python3-3.9.20/Modules/_opcode.c
+/usr/src/debug/python3-3.9.20/Modules/_pickle.c
+/usr/src/debug/python3-3.9.20/Modules/_posixsubprocess.c
+/usr/src/debug/python3-3.9.20/Modules/_queuemodule.c
+/usr/src/debug/python3-3.9.20/Modules/_randommodule.c
+/usr/src/debug/python3-3.9.20/Modules/_sha3/clinic/sha3module.c.h
+/usr/src/debug/python3-3.9.20/Modules/_sha3/kcp/KeccakHash.c
+/usr/src/debug/python3-3.9.20/Modules/_sha3/kcp/KeccakHash.h
+/usr/src/debug/python3-3.9.20/Modules/_sha3/kcp/KeccakP-1600-opt64.c
+/usr/src/debug/python3-3.9.20/Modules/_sha3/kcp/KeccakSponge.h
+/usr/src/debug/python3-3.9.20/Modules/_sha3/kcp/KeccakSponge.inc
+/usr/src/debug/python3-3.9.20/Modules/_sha3/sha3module.c
+/usr/src/debug/python3-3.9.20/Modules/_ssl.c
+/usr/src/debug/python3-3.9.20/Modules/_ssl/debughelpers.c
+/usr/src/debug/python3-3.9.20/Modules/_ssl_data_300.h
+/usr/src/debug/python3-3.9.20/Modules/_statisticsmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_struct.c
+/usr/src/debug/python3-3.9.20/Modules/_testinternalcapi.c
+/usr/src/debug/python3-3.9.20/Modules/_testmultiphase.c
+/usr/src/debug/python3-3.9.20/Modules/_uuidmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_xxsubinterpretersmodule.c
+/usr/src/debug/python3-3.9.20/Modules/_xxtestfuzz/_xxtestfuzz.c
+/usr/src/debug/python3-3.9.20/Modules/_xxtestfuzz/fuzzer.c
+/usr/src/debug/python3-3.9.20/Modules/_zoneinfo.c
+/usr/src/debug/python3-3.9.20/Modules/arraymodule.c
+/usr/src/debug/python3-3.9.20/Modules/audioop.c
+/usr/src/debug/python3-3.9.20/Modules/binascii.c
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/_codecs_cn.c
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/_codecs_hk.c
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/_codecs_iso2022.c
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/_codecs_jp.c
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/_codecs_kr.c
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/_codecs_tw.c
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/cjkcodecs.h
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/clinic/multibytecodec.c.h
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/mappings_cn.h
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/mappings_hk.h
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/mappings_jisx0213_pair.h
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/mappings_jp.h
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/mappings_kr.h
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/mappings_tw.h
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/multibytecodec.c
+/usr/src/debug/python3-3.9.20/Modules/cjkcodecs/multibytecodec.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_asynciomodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_bisectmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_bz2module.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_contextvarsmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_cryptmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_datetimemodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_dbmmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_elementtree.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_gdbmmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_hashopenssl.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_heapqmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_lzmamodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_opcode.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_pickle.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_queuemodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_randommodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_ssl.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_statisticsmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_struct.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/_testmultiphase.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/arraymodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/audioop.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/binascii.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/cmathmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/fcntlmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/grpmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/mathmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/md5module.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/pyexpat.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/resource.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/selectmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/sha1module.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/sha256module.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/sha512module.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/spwdmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/unicodedata.c.h
+/usr/src/debug/python3-3.9.20/Modules/clinic/zlibmodule.c.h
+/usr/src/debug/python3-3.9.20/Modules/cmathmodule.c
+/usr/src/debug/python3-3.9.20/Modules/fcntlmodule.c
+/usr/src/debug/python3-3.9.20/Modules/grpmodule.c
+/usr/src/debug/python3-3.9.20/Modules/mathmodule.c
+/usr/src/debug/python3-3.9.20/Modules/md5module.c
+/usr/src/debug/python3-3.9.20/Modules/mmapmodule.c
+/usr/src/debug/python3-3.9.20/Modules/ossaudiodev.c
+/usr/src/debug/python3-3.9.20/Modules/parsermodule.c
+/usr/src/debug/python3-3.9.20/Modules/posixmodule.h
+/usr/src/debug/python3-3.9.20/Modules/pyexpat.c
+/usr/src/debug/python3-3.9.20/Modules/readline.c
+/usr/src/debug/python3-3.9.20/Modules/resource.c
+/usr/src/debug/python3-3.9.20/Modules/rotatingtree.c
+/usr/src/debug/python3-3.9.20/Modules/rotatingtree.h
+/usr/src/debug/python3-3.9.20/Modules/selectmodule.c
+/usr/src/debug/python3-3.9.20/Modules/sha1module.c
+/usr/src/debug/python3-3.9.20/Modules/sha256module.c
+/usr/src/debug/python3-3.9.20/Modules/sha512module.c
+/usr/src/debug/python3-3.9.20/Modules/socketmodule.c
+/usr/src/debug/python3-3.9.20/Modules/socketmodule.h
+/usr/src/debug/python3-3.9.20/Modules/spwdmodule.c
+/usr/src/debug/python3-3.9.20/Modules/syslogmodule.c
+/usr/src/debug/python3-3.9.20/Modules/termios.c
+/usr/src/debug/python3-3.9.20/Modules/unicodedata.c
+/usr/src/debug/python3-3.9.20/Modules/unicodedata_db.h
+/usr/src/debug/python3-3.9.20/Modules/unicodename_db.h
+/usr/src/debug/python3-3.9.20/Modules/xxlimited.c
+/usr/src/debug/python3-3.9.20/Modules/zlibmodule.c
