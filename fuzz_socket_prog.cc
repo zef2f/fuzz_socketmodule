@@ -685,9 +685,16 @@ static void cleanup_invalid_commands(Program* program) {
 extern "C" size_t LLVMFuzzerCustomMutator(uint8_t *data, size_t size,
                                            size_t max_size, unsigned int seed) {
     Program program;
-    return protobuf_mutator::libfuzzer::CustomProtoMutator(false, data, size,
-                                                          max_size, seed,
-                                                          &program);
+    size = protobuf_mutator::libfuzzer::CustomProtoMutator(false, data, size,
+                                                           max_size, seed,
+                                                           &program);
+    cleanup_invalid_commands(&program);
+    size_t new_size = program.ByteSizeLong();
+    if (new_size > max_size) new_size = max_size;
+    if (program.SerializeToArray(data, new_size)) {
+        return new_size;
+    }
+    return 0;
 }
 
 extern "C" size_t LLVMFuzzerCustomCrossOver(const uint8_t *data1, size_t size1,
@@ -696,8 +703,24 @@ extern "C" size_t LLVMFuzzerCustomCrossOver(const uint8_t *data1, size_t size1,
                                              unsigned int seed) {
     Program program1;
     Program program2;
-    return protobuf_mutator::libfuzzer::CustomProtoCrossOver(false, data1, size1,
-                                                            data2, size2, out,
-                                                            max_out_size, seed,
-                                                            &program1, &program2);
+    size_t out_size = protobuf_mutator::libfuzzer::CustomProtoCrossOver(false,
+                                                                       data1,
+                                                                       size1,
+                                                                       data2,
+                                                                       size2,
+                                                                       out,
+                                                                       max_out_size,
+                                                                       seed,
+                                                                       &program1,
+                                                                       &program2);
+    Program out_program;
+    if (out_program.ParseFromArray(out, out_size)) {
+        cleanup_invalid_commands(&out_program);
+        size_t new_size = out_program.ByteSizeLong();
+        if (new_size > max_out_size) new_size = max_out_size;
+        if (out_program.SerializeToArray(out, new_size)) {
+            return new_size;
+        }
+    }
+    return out_size;
 }
