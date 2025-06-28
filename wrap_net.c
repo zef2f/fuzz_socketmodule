@@ -21,6 +21,7 @@ typedef ssize_t (*sendmsg_fn)(int, const struct msghdr*, int);
 typedef ssize_t (*recvmsg_fn)(int, struct msghdr*, int);
 typedef int (*getaddrinfo_fn)(const char*, const char*, const struct addrinfo*, struct addrinfo**);
 typedef int (*getnameinfo_fn)(const struct sockaddr*, socklen_t, char*, socklen_t, char*, socklen_t, int);
+typedef int (*close_fn)(int);
 
 static socketpair_fn real_socketpair;
 static connect_fn real_connect;
@@ -32,6 +33,7 @@ static sendmsg_fn real_sendmsg;
 static recvmsg_fn real_recvmsg;
 static getaddrinfo_fn real_getaddrinfo;
 static getnameinfo_fn real_getnameinfo;
+static close_fn real_close;
 
 static int call_counts[16] = {0};
 static int pair_fd[1024] = {[0 ... 1023] = -1};
@@ -51,6 +53,7 @@ static void init_wrap() {
     real_recvmsg = dlsym(RTLD_NEXT, "recvmsg");
     real_getaddrinfo = dlsym(RTLD_NEXT, "getaddrinfo");
     real_getnameinfo = dlsym(RTLD_NEXT, "getnameinfo");
+    real_close = dlsym(RTLD_NEXT, "close");
 }
 
 int socketpair(int domain, int type, int protocol, int sv[2]) {
@@ -227,4 +230,18 @@ int getnameinfo(const struct sockaddr *addr, socklen_t addrlen,
         return 0;
     }
     return EAI_AGAIN;
+}
+
+int close(int fd) {
+    if (!real_close) real_close = dlsym(RTLD_NEXT, "close");
+
+    if (fd < 1024) {
+        int partner = pair_fd[fd];
+        if (partner >= 0 && partner < 1024) {
+            pair_fd[partner] = -1;
+        }
+        pair_fd[fd] = -1;
+    }
+
+    return real_close(fd);
 }
