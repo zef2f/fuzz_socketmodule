@@ -19,6 +19,9 @@ typedef ssize_t (*send_fn)(int, const void*, size_t, int);
 typedef ssize_t (*recv_fn)(int, void*, size_t, int);
 typedef ssize_t (*sendmsg_fn)(int, const struct msghdr*, int);
 typedef ssize_t (*recvmsg_fn)(int, struct msghdr*, int);
+typedef ssize_t (*sendto_fn)(int, const void*, size_t, int, const struct sockaddr*, socklen_t);
+typedef ssize_t (*recvfrom_fn)(int, void*, size_t, int, struct sockaddr*, socklen_t*);
+typedef int (*bind_fn)(int, const struct sockaddr*, socklen_t);
 typedef int (*getaddrinfo_fn)(const char*, const char*, const struct addrinfo*, struct addrinfo**);
 typedef int (*getnameinfo_fn)(const struct sockaddr*, socklen_t, char*, socklen_t, char*, socklen_t, int);
 typedef int (*close_fn)(int);
@@ -31,6 +34,9 @@ static send_fn real_send;
 static recv_fn real_recv;
 static sendmsg_fn real_sendmsg;
 static recvmsg_fn real_recvmsg;
+static sendto_fn real_sendto;
+static recvfrom_fn real_recvfrom;
+static bind_fn real_bind;
 static getaddrinfo_fn real_getaddrinfo;
 static getnameinfo_fn real_getnameinfo;
 static close_fn real_close;
@@ -51,6 +57,9 @@ static void init_wrap() {
     real_recv = dlsym(RTLD_NEXT, "recv");
     real_sendmsg = dlsym(RTLD_NEXT, "sendmsg");
     real_recvmsg = dlsym(RTLD_NEXT, "recvmsg");
+    real_sendto = dlsym(RTLD_NEXT, "sendto");
+    real_recvfrom = dlsym(RTLD_NEXT, "recvfrom");
+    real_bind = dlsym(RTLD_NEXT, "bind");
     real_getaddrinfo = dlsym(RTLD_NEXT, "getaddrinfo");
     real_getnameinfo = dlsym(RTLD_NEXT, "getnameinfo");
     real_close = dlsym(RTLD_NEXT, "close");
@@ -86,6 +95,16 @@ int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen) {
         return 0;  // Success
     }
     errno = ECONNREFUSED;
+    return -1;
+}
+
+int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen) {
+    if (!real_bind) real_bind = dlsym(RTLD_NEXT, "bind");
+
+    if (call_counts[12]++ == 0 || (__wrap_input && (__wrap_input[0] & 128))) {
+        return 0;
+    }
+    errno = EADDRINUSE;
     return -1;
 }
 
@@ -147,6 +166,55 @@ ssize_t recv(int sockfd, void *buf, size_t len, int flags) {
         // Return some dummy data
         if (len > 0) {
             memset(buf, 'A', len > 4 ? 4 : len);
+            return len > 4 ? 4 : len;
+        }
+        return 0;
+    }
+    errno = EAGAIN;
+    return -1;
+}
+
+ssize_t sendto(int sockfd, const void *buf, size_t len, int flags,
+               const struct sockaddr *dest_addr, socklen_t addrlen) {
+    if (!real_sendto) real_sendto = dlsym(RTLD_NEXT, "sendto");
+
+    if (call_counts[10]++ == 0 || (__wrap_input && (__wrap_input[0] & 32))) {
+        if (sockfd < 1024 && pair_fd[sockfd] >= 0) {
+            return write(pair_fd[sockfd], buf, len);
+        }
+        return len;
+    }
+    errno = EAGAIN;
+    return -1;
+}
+
+ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags,
+                 struct sockaddr *src_addr, socklen_t *addrlen) {
+    if (!real_recvfrom) real_recvfrom = dlsym(RTLD_NEXT, "recvfrom");
+
+    if (call_counts[11]++ == 0 || (__wrap_input && (__wrap_input[0] & 64))) {
+        if (sockfd < 1024 && pair_fd[sockfd] >= 0) {
+            ssize_t ret = read(sockfd, buf, len);
+            if (ret > 0) {
+                if (src_addr && addrlen && *addrlen >= sizeof(struct sockaddr_in)) {
+                    struct sockaddr_in *sin = (struct sockaddr_in *)src_addr;
+                    sin->sin_family = AF_INET;
+                    sin->sin_port = htons(1234);
+                    sin->sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+                    *addrlen = sizeof(struct sockaddr_in);
+                }
+                return ret;
+            }
+        }
+        if (len > 0) {
+            memset(buf, 'C', len > 4 ? 4 : len);
+            if (src_addr && addrlen && *addrlen >= sizeof(struct sockaddr_in)) {
+                struct sockaddr_in *sin = (struct sockaddr_in *)src_addr;
+                sin->sin_family = AF_INET;
+                sin->sin_port = htons(1234);
+                sin->sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+                *addrlen = sizeof(struct sockaddr_in);
+            }
             return len > 4 ? 4 : len;
         }
         return 0;
