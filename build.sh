@@ -14,10 +14,10 @@ $CC -fPIC -shared -o wrap_net.so wrap_net.c -ldl
 echo "Generating protobuf files..."
 protoc --cpp_out=. socket_api.proto
 
-# Get Python config
-PYTHON_CONFIG="buildroot/usr/bin/python3.9-config"
-PYTHON_CFLAGS=$($PYTHON_CONFIG --cflags)
-PYTHON_LDFLAGS=$($PYTHON_CONFIG --ldflags --embed)
+# Get Python config using bundled interpreter
+PYTHON_CONFIG="buildroot/usr/bin/python3.9 buildroot/usr/lib64/python3.9/config-3.9-x86_64-linux-gnu/python-config.py"
+PYTHON_CFLAGS=$(ASAN_OPTIONS=detect_leaks=0 $PYTHON_CONFIG --cflags)
+PYTHON_LDFLAGS=$(ASAN_OPTIONS=detect_leaks=0 $PYTHON_CONFIG --ldflags --embed)
 
 # Build fuzzer
 echo "Building fuzzer..."
