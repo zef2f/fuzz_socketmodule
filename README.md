@@ -34,7 +34,7 @@ This installs headers and libraries under `/usr/local`.
 Clone this repository and run the build script:
 
 ```bash
-git clone https://example.com/fuzz_socketmodule.git
+git clone https://github.com/zef2f/fuzz_socketmodule.git
 cd fuzz_socketmodule
 ./build.sh
 ```
@@ -47,6 +47,12 @@ Use the provided wrapper to intercept networking calls:
 
 ```bash
 LD_PRELOAD=./wrap_net.so ./fuzz_socket -max_len=512 corpus/
+```
+
+For convenience you can also run:
+
+```bash
+./run_fuzzer.sh
 ```
 
 See the `build.sh` script for additional instructions on coverage analysis and seed corpus contents.
