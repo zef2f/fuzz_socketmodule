@@ -3,7 +3,7 @@ set -e
 
 export CC=clang
 export CXX=clang++
-export CFLAGS="-fsanitize=fuzzer,address,undefined -fno-sanitize=function -fno-sanitize=leak -fsanitize-coverage=trace-cmp,trace-div,trace-gep -g -O1 -fno-omit-frame-pointer -fno-optimize-sibling-calls -Ibuildroot/usr/include/python3.9 -Wl,--export-dynamic -Wl,--whole-archive buildroot/usr/lib64/python3.9/config-3.9-x86_64-linux-gnu/libpython3.9.a -Wl,--no-whole-archive -lcrypt -ldl -lm -lpthread -lutil -lrt -lstdc++ "
+export CFLAGS="-fsanitize=fuzzer,address,undefined -fno-sanitize=function -fno-sanitize=leak -fsanitize-coverage=trace-cmp,trace-div,trace-gep -g -O1 -fno-omit-frame-pointer -fno-optimize-sibling-calls -Ibuildroot/usr/include/python3.9 -I/usr/local/include/libprotobuf-mutator -L/usr/local/lib -Wl,--export-dynamic -Wl,--whole-archive buildroot/usr/lib64/python3.9/config-3.9-x86_64-linux-gnu/libpython3.9.a -Wl,--no-whole-archive -lcrypt -ldl -lm -lpthread -lutil -lrt -lstdc++ "
 export CXXFLAGS="$CFLAGS -std=c++17"
 
 # Build wrap_net.so
@@ -23,9 +23,9 @@ PYTHON_LDFLAGS=$(ASAN_OPTIONS=detect_leaks=0 $PYTHON_CONFIG --ldflags --embed)
 echo "Building fuzzer..."
 $CXX $CXXFLAGS \
     fuzz_socket_prog.cc socket_api.pb.cc \
-    -lprotobuf \
-    -lprotobuf-mutator \
     -lprotobuf-mutator-libfuzzer \
+    -lprotobuf-mutator \
+    -lprotobuf \
     -fsanitize=fuzzer \
     -o fuzz_socket
 
