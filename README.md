@@ -1,6 +1,13 @@
 # Fuzzing Python's socket module
 
-This project provides a libFuzzer-based harness for Python's socket module using `libprotobuf-mutator` to generate protocol buffers describing socket operations.
+This project provides a libFuzzer-based harness for Python's socket module.  It
+uses `libprotobuf-mutator` to generate protocol buffers that describe sequences
+of socket API calls.  The fuzzer is compiled with sanitizers enabled so any
+memory safety bugs in the Python implementation or wrapper code can be detected.
+
+The repository already contains a prebuilt Python 3.9 interpreter under
+`buildroot/` which is used when compiling the harness.  You only need to install
+the toolchain and build `libprotobuf‑mutator` once.
 
 ## Requirements
 
@@ -49,7 +56,23 @@ Use the provided wrapper to intercept networking calls:
 LD_PRELOAD=./wrap_net.so ./fuzz_socket -max_len=512 corpus/
 ```
 
+If you just want to confirm that the harness runs, execute it for a few seconds
+using `timeout`:
+
+```bash
+timeout 5s bash -c 'LD_PRELOAD=./wrap_net.so ./fuzz_socket -max_len=512 corpus/'
+```
+
 Press `Ctrl+C` to stop the fuzzer. If it keeps running,
 use `pidof fuzz_socket` and `kill` to terminate the process.
 
 See the `build.sh` script for additional instructions on coverage analysis and seed corpus contents.
+
+### Checking coverage
+
+To generate a coverage report run:
+
+```bash
+llvm-profdata merge -sparse default.profraw -o default.profdata
+llvm-cov show ./fuzz_socket -instr-profile=default.profdata
+```
