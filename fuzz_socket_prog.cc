@@ -39,6 +39,7 @@ static void apply_InitSection(const Header& init) {
             PyObject* sock = PyObject_CallMethod(socket_class, "fromfd", "iii",
                 fd[0], sock_init.family(), sock_init.type());
             Py_DECREF(socket_class);
+            close(fd[0]);
             if (sock) {
                 socket_pool[sock_init.id()] = sock;
                 if (!sock_init.preload_send().empty()) {
