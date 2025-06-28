@@ -48,3 +48,5 @@ Use the provided wrapper to intercept networking calls:
 ```bash
 LD_PRELOAD=./wrap_net.so ./fuzz_socket -max_len=512 corpus/
 ```
+
+See the `build.sh` script for additional instructions on coverage analysis and seed corpus contents.
