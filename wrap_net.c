@@ -59,9 +59,14 @@ static void init_wrap() {
 int socketpair(int domain, int type, int protocol, int sv[2]) {
     if (!real_socketpair) real_socketpair = dlsym(RTLD_NEXT, "socketpair");
     
-    // Always use real socketpair for AF_UNIX
+    // Always use real socketpair for AF_UNIX but track the pair
     if (domain == AF_UNIX) {
-        return real_socketpair(domain, type, protocol, sv);
+        int ret = real_socketpair(domain, type, protocol, sv);
+        if (ret == 0) {
+            if (sv[0] < 1024) pair_fd[sv[0]] = sv[1];
+            if (sv[1] < 1024) pair_fd[sv[1]] = sv[0];
+        }
+        return ret;
     }
     
     // For other domains, succeed first time or based on input bit
@@ -244,4 +249,15 @@ int close(int fd) {
     }
 
     return real_close(fd);
+}
+
+// Called by the fuzzer to clean up any remaining descriptors
+void wrap_reset(void) {
+    if (!real_close) real_close = dlsym(RTLD_NEXT, "close");
+    for (int i = 0; i < 1024; i++) {
+        if (pair_fd[i] >= 0) {
+            real_close(i);
+            pair_fd[i] = -1;
+        }
+    }
 }

@@ -6,6 +6,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <dlfcn.h>
 #include <libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h>
 #include "socket_api.pb.h"
 
@@ -18,6 +19,7 @@ const uint8_t *__wrap_input = nullptr;
 static std::array<PyObject*, 64> socket_pool;
 static PyObject* socket_module = nullptr;
 static uint32_t iteration_count = 0;
+static void (*wrap_reset_fn)(void) = nullptr;
 
 static void reset_resource_pool() {
     for (auto& sock : socket_pool) {
@@ -27,6 +29,12 @@ static void reset_resource_pool() {
         }
         sock = nullptr;
     }
+    if (!wrap_reset_fn) {
+        wrap_reset_fn = (void (*)())dlsym(RTLD_DEFAULT, "wrap_reset");
+    }
+    if (wrap_reset_fn) {
+        wrap_reset_fn();
+    }
 }
 
 static void apply_InitSection(const Header& init) {
@@ -35,17 +43,17 @@ static void apply_InitSection(const Header& init) {
         
         int fd[2];
         if (socketpair(AF_UNIX, sock_init.type(), 0, fd) == 0) {
-            PyObject* socket_class = PyObject_GetAttrString(socket_module, "socket");
-            PyObject* sock = PyObject_CallMethod(socket_class, "fromfd", "iii",
-                fd[0], sock_init.family(), sock_init.type());
-            Py_DECREF(socket_class);
-            close(fd[0]);
+            if (!sock_init.preload_send().empty()) {
+                write(fd[1], sock_init.preload_send().data(),
+                      sock_init.preload_send().size());
+            }
+
+            PyObject* sock = PyObject_CallMethod(socket_module, "socket", "iiii",
+                sock_init.family(), sock_init.type(), 0, fd[0]);
             if (sock) {
                 socket_pool[sock_init.id()] = sock;
-                if (!sock_init.preload_send().empty()) {
-                    PyObject_CallMethod(sock, "send", "y#",
-                        sock_init.preload_send().data(), sock_init.preload_send().size());
-                }
+            } else {
+                close(fd[0]);
                 close(fd[1]);
             }
         }
