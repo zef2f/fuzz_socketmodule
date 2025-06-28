@@ -15,7 +15,7 @@ echo "Generating protobuf files..."
 protoc --cpp_out=. socket_api.proto
 
 # Get Python config
-PYTHON_CONFIG="python3.9-config"
+PYTHON_CONFIG="buildroot/usr/bin/python3.9-config"
 PYTHON_CFLAGS=$($PYTHON_CONFIG --cflags)
 PYTHON_LDFLAGS=$($PYTHON_CONFIG --ldflags --embed)
 
