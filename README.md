@@ -49,4 +49,7 @@ Use the provided wrapper to intercept networking calls:
 LD_PRELOAD=./wrap_net.so ./fuzz_socket -max_len=512 corpus/
 ```
 
+Press `Ctrl+C` to stop the fuzzer. If it keeps running,
+use `pidof fuzz_socket` and `kill` to terminate the process.
+
 See the `build.sh` script for additional instructions on coverage analysis and seed corpus contents.
