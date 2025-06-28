@@ -4,17 +4,25 @@
 #include <cstring>
 #include <unistd.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
 #include <dlfcn.h>
 #include <libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h>
 #include "socket_api.pb.h"
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#undef htons
+#undef htonl
+#undef ntohs
+#undef ntohl
 
 extern "C" {
 void __sanitizer_cov_trace_pc_guard_cmp8(uint64_t arg1, uint64_t arg2);
-PyObject* _PyGC_CollectNoFail(void);
+Py_ssize_t _PyGC_CollectNoFail(void);
 const uint8_t *__wrap_input = nullptr;
 }
+
+// Provide weak definition in case sanitizer runtime doesn't supply it
+extern "C" __attribute__((weak)) void __sanitizer_cov_trace_pc_guard_cmp8(
+    uint64_t, uint64_t) {}
 
 static std::array<PyObject*, 64> socket_pool;
 static PyObject* socket_module = nullptr;
@@ -502,6 +510,7 @@ static void do_command(const Command& cmd) {
 
 extern "C" int LLVMFuzzerInitialize(int *argc, char ***argv) {
     Py_SetProgramName(L"fuzz_socket");
+    Py_SetPythonHome(L"buildroot/usr");
     Py_NoSiteFlag = 1;
     Py_IsolatedFlag = 1;
     Py_Initialize();
@@ -672,37 +681,23 @@ static void cleanup_invalid_commands(Program* program) {
         cmds->end());
 }
 
-DEFINE_PROTO_FUZZER(const Program& input) {
-    static bool initialized = false;
-    if (!initialized) {
-        LLVMFuzzerInitialize(nullptr, nullptr);
-        initialized = true;
-    }
-    
-    Program program = input;
-    cleanup_invalid_commands(&program);
-    
-    std::string serialized;
-    program.SerializeToString(&serialized);
-    
-    if (serialized.size() > 512) {
-        serialized.resize(512);
-    }
-    
-    LLVMFuzzerTestOneInput(
-        reinterpret_cast<const uint8_t*>(serialized.data()),
-        serialized.size());
-}
-
+// Custom mutator and crossover wrappers used by libprotobuf-mutator
 extern "C" size_t LLVMFuzzerCustomMutator(uint8_t *data, size_t size,
                                            size_t max_size, unsigned int seed) {
-    return libfuzzer::MutateTextProto(data, size, max_size, seed);
+    Program program;
+    return protobuf_mutator::libfuzzer::CustomProtoMutator(false, data, size,
+                                                          max_size, seed,
+                                                          &program);
 }
 
 extern "C" size_t LLVMFuzzerCustomCrossOver(const uint8_t *data1, size_t size1,
                                              const uint8_t *data2, size_t size2,
                                              uint8_t *out, size_t max_out_size,
                                              unsigned int seed) {
-    return libfuzzer::CrossOverTextProto(data1, size1, data2, size2,
-                                         out, max_out_size, seed);
+    Program program1;
+    Program program2;
+    return protobuf_mutator::libfuzzer::CustomProtoCrossOver(false, data1, size1,
+                                                            data2, size2, out,
+                                                            max_out_size, seed,
+                                                            &program1, &program2);
 }
