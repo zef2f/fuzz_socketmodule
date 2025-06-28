@@ -328,4 +328,7 @@ void wrap_reset(void) {
             pair_fd[i] = -1;
         }
     }
+    for (int i = 0; i < 16; i++) {
+        call_counts[i] = 0;
+    }
 }
