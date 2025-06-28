@@ -1,0 +1,9 @@
+header {
+  socks {
+    id: 1
+    family: 10   # AF_INET6
+    type: 2      # SOCK_DGRAM
+    preload_send: "GET / HTTP/1.0\r\n\r\n"
+  }
+}
+command { sock_socket { family: 2 type: 1 proto: 0 target_id: 3 } }

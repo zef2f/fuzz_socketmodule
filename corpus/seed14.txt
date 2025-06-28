@@ -1,0 +1,2 @@
+header { socks { id: 0 family: 1 type: 1 } }
+command { sock_bind { id: 0 addr: "/tmp/subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_subdir_sock" } }

@@ -1,0 +1,2 @@
+command { sock_socket { family: 999 type: 3 proto: 0 target_id: 0 } }
+command { sock_close  { id: 0 } }

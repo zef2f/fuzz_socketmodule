@@ -1,0 +1,3 @@
+command { getaddrinfo { host: "localhost"
+                        service: "999999999999999999"
+                        family: 2 type: 1 } }
