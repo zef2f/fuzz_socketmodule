@@ -56,6 +56,15 @@ Use the provided wrapper to intercept networking calls:
 LD_PRELOAD=./wrap_net.so ./fuzz_socket -max_len=512 corpus/
 ```
 
+Leak detection in AddressSanitizer can produce a lot of noise when fuzzing
+Python's socket module. The build script already disables leak checking, but the
+runtime environment must also turn it off. Set the `ASAN_OPTIONS` environment
+variable when launching the fuzzer:
+
+```bash
+ASAN_OPTIONS=detect_leaks=0 LD_PRELOAD=./wrap_net.so ./fuzz_socket -max_len=512 corpus/
+```
+
 If you just want to confirm that the harness runs, execute it for a few seconds
 using `timeout`:
 
