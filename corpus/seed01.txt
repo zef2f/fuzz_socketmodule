@@ -1,1 +1,0 @@
-header { socks { id: 0 family: 2 type: 1 } }           # пустой TCP-сокет

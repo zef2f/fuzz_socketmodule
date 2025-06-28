@@ -1,2 +1,0 @@
-header { socks { id: 0 family: 2 type: 2 payload: "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC" } }
-command { sock_recvmsg_into { id: 0 nbytes: 16 ancbufsize: 4096 flags: 0 } }

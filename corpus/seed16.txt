@@ -1,2 +1,0 @@
-header { socks { id: 0 family: 2 type: 1 } }
-command { sock_shutdown { id: 0 how: 123 } }

@@ -1,5 +1,0 @@
-command { getaddrinfo {
-    host: "xn--wgv71a119e.xn--wgv71a119e.xn--wgv71a119e.xn--wgv71a119e"
-    family: 0               # AF_UNSPEC
-    flags: 66               # AI_IDN | AI_CANONNAME
-} }

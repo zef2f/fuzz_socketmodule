@@ -1,2 +1,0 @@
-command { inet_pton { family: 2 text: "127.0.0.1" } }
-command { inet_ntop { family: 2 packed: "\x7f\x00\x00\x01" } }
