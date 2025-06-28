@@ -11,7 +11,11 @@ import sys
 
 TOKENS = [
     "GET ", "POST ", "HEAD ",
-    "HTTP/1.0\\r\\n", "HTTP/1.1\\r\\n", "\\r\\n\\r\\n",
+    # Используем hex-последовательности вместо \r и \n, т.к. libFuzzer
+    # не умеет парсить их в словаре напрямую.
+    "HTTP/1.0\\x0d\\x0a",
+    "HTTP/1.1\\x0d\\x0a",
+    "\\x0d\\x0a\\x0d\\x0a",
     "Host:", "User-Agent:", "Content-Length:",
     "127.0.0.1", "::1", "/etc/passwd",
     "\\x00\\x50",          # порт  80 (BE)

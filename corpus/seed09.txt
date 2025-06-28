@@ -1,0 +1,4 @@
+command { sock_socketpair { family: 2 type: 1 proto: 0 id1: 10 id2: 11 } }
+command { sock_dup        { src_id: 10 dst_id: 20 } }
+command { sock_close      { id: 10 } }
+command { sock_close      { id: 20 } }
